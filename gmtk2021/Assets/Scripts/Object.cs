@@ -7,6 +7,9 @@ public class Object : MonoBehaviour
     public bool isPossessed = false;
     public bool isEndObject = false;
     public Child_Object Possess_Pos;
+    public Sprite Idle_sprite;
+    public Sprite Activated_sprite;
+
 
     // Activation function
     void Activate()
@@ -15,11 +18,11 @@ public class Object : MonoBehaviour
 
         if (Object_Animator.GetBool("isActivated") == true)
         {
-
+            GetComponent<SpriteRenderer>().sprite = Activated_sprite;
         }
         else
         {
-
+            GetComponent<SpriteRenderer>().sprite = Idle_sprite;
         }
     }
 
