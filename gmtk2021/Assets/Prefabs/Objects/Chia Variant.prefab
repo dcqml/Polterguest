@@ -8,12 +8,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3349040168921501481, guid: 8ff2c59846b089e49b5a1dce73094a43, type: 3}
+      objectReference: {fileID: 3349040168921501481, guid: 4354b574d0d1f2445add376154f03c0b, type: 3}
     - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5966822610909163748, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
       propertyPath: m_RootOrder

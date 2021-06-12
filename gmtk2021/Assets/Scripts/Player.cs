@@ -71,5 +71,14 @@ public class Player : MonoBehaviour
                 CurrentlyPossessedObject.SetPossess(true);
             }
         }
+        else
+        {
+            if(obj.GetComponent<Animator>().GetBool("isIdlePostTrigger"))
+            {
+                CurrentlyPossessedObject.SetPossess(false);
+                print($"possession du patrouilleur {obj.name}");
+                CurrentlyPossessedObject = obj;
+            }
+        }
     }
 }
