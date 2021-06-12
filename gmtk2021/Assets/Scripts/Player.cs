@@ -39,17 +39,16 @@ public class Player : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(mouseRay.origin, mouseRay.direction);
                 if(colliders.Find(x => x == hit.collider))
                 {
-                    Object obj = hit.collider.gameObject.GetComponent<Object>();
+                    Object obj = hit.collider.gameObject.transform.parent.GetComponent<Object>();
                     if(obj != null)
                     {
                         DoSmth(obj);
                     }
-                    
                 }
             }
             else
             {
-                //normal click
+                print("nothing here");
             }
             lastClickTime = Time.time;
         }
