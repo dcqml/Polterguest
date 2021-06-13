@@ -1,15 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3816569110067299305
+--- !u!1001 &5803104956490704883
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3349040168921501481, guid: 4354b574d0d1f2445add376154f03c0b, type: 3}
+    - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203015433702806862, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5966822610909163748, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966822610909163748, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966822610909163748, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5966822610909163748, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53,15 +85,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5966822610909163758, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
       propertyPath: m_Name
-      value: Lampe Variant
+      value: Chia Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966822610909163759, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: CanPatrol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764755969797831453, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764755969797831453, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328995571031144592, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.525
       objectReference: {fileID: 0}
     - target: {fileID: 7328995571031144592, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.775
+      value: 0.097
       objectReference: {fileID: 0}
     - target: {fileID: 7328995571031144592, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.599
+      value: -0.467
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1962b981172449a49a136d8a5aa408df, type: 3}

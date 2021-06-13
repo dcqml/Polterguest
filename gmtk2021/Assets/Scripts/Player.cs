@@ -56,18 +56,29 @@ public class Player : MonoBehaviour
 
     private void DoSmth(Object obj)
     {
-        
-        if(obj == CurrentlyPossessedObject)
+        if(!obj.CanPatrol)
         {
-            print($"interaction avec {obj.name}");
-            CurrentlyPossessedObject.Activate();
+            if (obj == CurrentlyPossessedObject)
+            {
+                print($"interaction avec {obj.name}");
+                CurrentlyPossessedObject.Activate();
+            }
+            else
+            {
+                CurrentlyPossessedObject.SetPossess(false);
+                print($"possession de {obj.name}");
+                CurrentlyPossessedObject = obj;
+                CurrentlyPossessedObject.SetPossess(true);
+            }
         }
         else
         {
-            CurrentlyPossessedObject.SetPossess(false);
-            print($"possession de {obj.name}");
-            CurrentlyPossessedObject = obj;
-            CurrentlyPossessedObject.SetPossess(true);
+            if(obj.GetComponent<Animator>().GetBool("isIdlePostTrigger"))
+            {
+                CurrentlyPossessedObject.SetPossess(false);
+                print($"possession du patrouilleur {obj.name}");
+                CurrentlyPossessedObject = obj;
+            }
         }
     }
 }

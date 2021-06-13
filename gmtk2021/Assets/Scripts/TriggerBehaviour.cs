@@ -2,18 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActivateBehavior : StateMachineBehaviour
+public class TriggerBehaviour : StateMachineBehaviour
 {
+    private Object obj;
+    public float speed;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        obj = animator.transform.GetComponent<Object>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        float patrolXPos = obj.TriggerSource.transform.position.x;
+        bool leftDir = animator.transform.position.x - patrolXPos > 0;
+        obj.transform.rotation = Quaternion.Euler(obj.transform.rotation.x, leftDir ? 180 : 0, 0);
+
+        if (Vector2.Distance(animator.transform.position, new Vector2(patrolXPos, animator.transform.position.y)) > 0.2f)
+        {
+            animator.transform.position = Vector2.MoveTowards(animator.transform.position, new Vector2(patrolXPos, animator.transform.position.y), speed * Time.deltaTime);
+        }
+        else
+        {
+            animator.SetBool("isIdlePostTrigger", true);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -11,14 +11,35 @@ public class Object : MonoBehaviour
     public bool CanPatrol = false;
     public bool Reversible = true;
 
+    public InteractionType InteractionType = InteractionType.Flip;
+    public Vector2 OriginPos;
+    public Vector2 InteractionPosDest;
+    public GameObject InteractionPosDestObj;
+    public GameObject AnimObject;
     public GameObject PlayerJointPosition;
+    public GameObject PatrolPosAObj;
+    public GameObject PatrolPosBObj;
+    public Vector2 PatrolPosA;
+    public Vector2 PatrolPosB;
 
     private Player player { get { return FindObjectOfType<Player>(); } }
 
     private bool ActivatedOnce = false;
     private Animator Object_Animator;
 
-    public List<Object> TriggerObjects; // Objects that can be triggered on this object activation
+    public List<GameObject> TriggerObjects; // Objects that can be triggered on this object activation
+    public Object TriggerSource; // Object that triggered the other object
+    public bool alreadyTriggered = false;
+
+    public void Start()
+    {
+        OriginPos = transform.position;
+        Object_Animator = GetComponent<Animator>();
+        InteractionPosDest = InteractionPosDestObj.transform.position;
+        PatrolPosA = PatrolPosAObj.transform.position;
+        PatrolPosB = PatrolPosBObj.transform.position;
+        if (CanPatrol) Patrol();
+    }
 
     // Activation function
     public void Activate()
@@ -27,10 +48,16 @@ public class Object : MonoBehaviour
         {
             if (Reversible || (!Reversible && !ActivatedOnce))
             {
-                Object_Animator.SetTrigger("activate");
+                Object_Animator.SetTrigger(InteractionType == InteractionType.Flip ? "flip" : "translate");
                 foreach (var obj in TriggerObjects)
                 {
-                    obj.Trigger();
+                    var objComp = obj.GetComponent<Object>();
+                    if(objComp != null && !alreadyTriggered)
+                    {
+                        objComp.TriggerSource = this;
+                        objComp.Trigger();
+                    }
+                    alreadyTriggered = true;
                 }
                 if (!Reversible) ActivatedOnce = true;
             }
@@ -49,7 +76,7 @@ public class Object : MonoBehaviour
     // Patrol function
     public void Patrol()
     {
-        Object_Animator.SetBool("isPatrolling", !(Object_Animator.GetBool("isPatrolling")));
+        Object_Animator.SetBool("isPatrolling", true);
     }
 
     // Trigger function
@@ -57,11 +84,10 @@ public class Object : MonoBehaviour
     {
         Object_Animator.SetTrigger("trigger");
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Object_Animator = GetComponent<Animator>();
-    }
 }
 
+public enum InteractionType
+{
+    Flip,
+    Translate
+}
