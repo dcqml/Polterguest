@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
 
     public float Speed;
 
+    public bool LevelFinished = false;
+
     private void Awake()
     {
         CurrentlyPossessedObject = StartObject.GetComponent<Object>();
@@ -30,52 +32,55 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Vector2.Distance(transform.position, CurrentlyPossessedObject.PlayerJointPosition.transform.position) > 0.1f)
+        if(!LevelFinished)
         {
-            transform.position = Vector2.MoveTowards(transform.position, CurrentlyPossessedObject.PlayerJointPosition.transform.position, Speed);
-        }
-        else
-        {
-            transform.position = CurrentlyPossessedObject.PlayerJointPosition.transform.position;
-        }
-        Circle.transform.localScale = new Vector3(PossessionRadius, PossessionRadius, 1);
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            if (Time.time - lastClickTime < catchTime)
+            if (Vector2.Distance(transform.position, CurrentlyPossessedObject.PlayerJointPosition.transform.position) > 0.1f)
             {
-                print("Double click");
-                var colliders = Physics2D.OverlapCircleAll(transform.position, PossessionRadius).ToList();
-                var mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-                var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                RaycastHit2D[] hits = Physics2D.RaycastAll(mouseRay.origin, mouseRay.direction);
-                if(hits.Length > 0)
-                {
-                    Object obj;
-                    float distMin = float.MaxValue;
-                    float dist;
-                    Object objMin = null;
-                    foreach (var rchit in hits)
-                    {
-                        obj = rchit.collider.gameObject.transform.parent.GetComponent<Object>();
-                        if (obj != null)
-                        {
-                            dist = Vector2.Distance(mousePos, obj.PlayerJointPosition.transform.position);
-                            if(dist < distMin)
-                            {
-                                distMin = dist;
-                                objMin = obj;
-                            }
-                        }
-                    }
-                    if(objMin != null) DoSmth(objMin);
-                }
+                transform.position = Vector2.MoveTowards(transform.position, CurrentlyPossessedObject.PlayerJointPosition.transform.position, Speed);
             }
             else
             {
-                print("nothing here");
+                transform.position = CurrentlyPossessedObject.PlayerJointPosition.transform.position;
             }
-            lastClickTime = Time.time;
+            Circle.transform.localScale = new Vector3(PossessionRadius, PossessionRadius, 1);
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if (Time.time - lastClickTime < catchTime)
+                {
+                    print("Double click");
+                    var colliders = Physics2D.OverlapCircleAll(transform.position, PossessionRadius).ToList();
+                    var mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    RaycastHit2D[] hits = Physics2D.RaycastAll(mouseRay.origin, mouseRay.direction);
+                    if (hits.Length > 0)
+                    {
+                        Object obj;
+                        float distMin = float.MaxValue;
+                        float dist;
+                        Object objMin = null;
+                        foreach (var rchit in hits)
+                        {
+                            obj = rchit.collider.gameObject.transform.parent.GetComponent<Object>();
+                            if (obj != null)
+                            {
+                                dist = Vector2.Distance(mousePos, obj.PlayerJointPosition.transform.position);
+                                if (dist < distMin)
+                                {
+                                    distMin = dist;
+                                    objMin = obj;
+                                }
+                            }
+                        }
+                        if (objMin != null) DoSmth(objMin);
+                    }
+                }
+                else
+                {
+                    print("nothing here");
+                }
+                lastClickTime = Time.time;
+            }
         }
     }
 

@@ -84,7 +84,14 @@ public class Object : MonoBehaviour
     public void SetPossess(bool possess)
     {
         Object_Animator.SetBool("isPossessed", possess);
-        if(possess) Camera.main.GetComponent<RipplePostProcessor>().Ripple(PlayerJointPosition.transform.position);
+        if (possess)
+        {
+            Camera.main.GetComponent<RipplePostProcessor>().Ripple(PlayerJointPosition.transform.position);
+            if(IsEndObject)
+            {
+                FindObjectOfType<MainManager>().DisplayScore();
+            }
+        }
     }
     
     // Patrol function

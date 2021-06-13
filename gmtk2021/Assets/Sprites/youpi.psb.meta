@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 15dbe8801c3eca944b31d1117aaa917c
 ScriptedImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4902228404884071397
+    second: youpi_0
+  - first:
+      213: -4045795419363345478
+    second: youpi_1
+  - first:
+      213: -360281557619485742
+    second: youpi_2
+  - first:
+      213: -7624383973959042995
+    second: youpi_3
+  - first:
+      213: 6808150665685423362
+    second: youpi_4
+  - first:
+      213: 6653133721810281866
+    second: youpi_5
+  - first:
+      213: -1747354406290459853
+    second: youpi_6
+  - first:
+      213: 5729470102260308008
+    second: youpi_7
+  - first:
+      213: 2719861327622456073
+    second: youpi_8
+  - first:
+      213: -4364218183382679436
+    second: youpi_9
+  - first:
+      213: -2473612054644734793
+    second: youpi_10
+  - first:
+      213: 7847577187017121242
+    second: youpi_11
+  - first:
+      213: -8278677464496684412
+    second: youpi_12
+  - first:
+      213: -7353514095172830571
+    second: youpi_13
   externalObjects: {}
   serializedVersion: 2
   userData: 
@@ -91,18 +133,18 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Calque 7
+  - name: youpi_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1734
-      y: 1138
-      width: 46
-      height: 96
-    spriteID: 2511c7c4cf7ef4b4793ee8b2b59d4ec0
+      x: 73
+      y: 1827
+      width: 529
+      height: 290
+    spriteID: b1c1e072d39c7fbb0800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -112,19 +154,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1370, y: 754}
-  - name: Calque 8
+    uvTransform: {x: 73, y: 1827}
+  - name: youpi_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1612
-      y: 1138
-      width: 114
-      height: 135
-    spriteID: 6f6b75b094dbd234db8fb7f027d6ec43
+      x: 24
+      y: 1818
+      width: 8
+      height: 6
+    spriteID: abbf1fa60827ad7c0800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -134,19 +176,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1180, y: 751}
-  - name: Calque 9
+    uvTransform: {x: 24, y: 1818}
+  - name: youpi_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1940
-      y: 421
-      width: 102
-      height: 175
-    spriteID: 1af9ff69de667394c93085e587a35ea4
+      x: 1
+      y: 909
+      width: 1606
+      height: 906
+    spriteID: 2d357fa05d5000bf0800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -156,19 +198,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1846, y: -156}
-  - name: Calque 5
+    uvTransform: {x: 1, y: 909}
+  - name: youpi_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1843
-      y: 421
-      width: 89
-      height: 201
-    spriteID: 51e0da9d6f2a0d44d814af352ea8bca5
+      x: 1611
+      y: 1139
+      width: 234
+      height: 22
+    spriteID: d487df0eb2fb03690800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -178,19 +220,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 700, y: 255}
-  - name: Calque 10
+    uvTransform: {x: 1611, y: 1139}
+  - name: youpi_4
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1843
-      y: 4
-      width: 194
-      height: 153
-    spriteID: 64116bb59192c8940a724d2c027c05eb
+      x: 1611
+      y: 911
+      width: 278
+      height: 222
+    spriteID: 205d48595f86b7e50800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -200,19 +242,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 784, y: -20}
-  - name: Calque 11
+    uvTransform: {x: 1611, y: 911}
+  - name: youpi_5
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1820
-      width: 596
-      height: 307
-    spriteID: 5ac1d1cb515c43347a03919764397340
+      x: 1
+      y: 1
+      width: 1606
+      height: 906
+    spriteID: a85aca3cedda45c50800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -222,19 +264,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -327, y: 1812}
-  - name: Calque 12
+    uvTransform: {x: 1, y: 1}
+  - name: youpi_6
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1612
-      y: 1377
-      width: 233
-      height: 18
-    spriteID: b9949a9eec8bfb54c8f08b627416f000
+      x: 1611
+      y: 787
+      width: 170
+      height: 92
+    spriteID: 333f754ec6620c7e0800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -244,19 +286,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1273, y: 998}
-  - name: Calque 13
+    uvTransform: {x: 1611, y: 787}
+  - name: youpi_7
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1612
-      y: 1281
-      width: 168
-      height: 88
-    spriteID: 01cec5ad44a83024ebfb312efe2fbc45
+      x: 1795
+      y: 789
+      width: 48
+      height: 100
+    spriteID: 8285274b3ba238f40800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -266,19 +308,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1554, y: 789}
-  - name: Calque 14
+    uvTransform: {x: 1795, y: 789}
+  - name: youpi_8
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1843
-      y: 165
-      width: 177
-      height: 158
-    spriteID: c6902717aece36c44a441b974b3f25e2
+      x: 1893
+      y: 763
+      width: 116
+      height: 138
+    spriteID: 903424f8773eeb520800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -288,19 +330,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1053, y: -485}
-  - name: Calque 15
+    uvTransform: {x: 1893, y: 763}
+  - name: youpi_9
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1612
-      y: 912
-      width: 275
-      height: 218
-    spriteID: 0fb2731991e1e304fa0cef3de4979421
+      x: 1611
+      y: 3
+      width: 180
+      height: 778
+    spriteID: 470cc215fae2f63c0800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -310,19 +352,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 508, y: 351}
-  - name: Calque 16 copie
+    uvTransform: {x: 1611, y: 3}
+  - name: youpi_10
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1612
-      y: 4
-      width: 223
-      height: 409
-    spriteID: ea019937c32f6cc48bff7f60fb221f1e
+      x: 1795
+      y: 581
+      width: 92
+      height: 202
+    spriteID: 7b4c6ca21f6fbadd0800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -332,19 +374,63 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 811, y: -21}
-  - name: Calque 16
+    uvTransform: {x: 1795, y: 581}
+  - name: youpi_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1893
+      y: 581
+      width: 104
+      height: 178
+    spriteID: add5d939fd138ec60800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1893, y: 581}
+  - name: youpi_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1795
+      y: 419
+      width: 198
+      height: 156
+    spriteID: 482c4a655ba3c1d80800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1795, y: 419}
+  - name: youpi_13
     originalName: 
     pivot: {x: 1, y: 0.5}
     alignment: 5
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1612
-      y: 421
-      width: 223
-      height: 409
-    spriteID: dac96d0b7e01bde4f83e02c21db2e3d5
+      x: 1795
+      y: 3
+      width: 226
+      height: 412
+    spriteID: 59a356a14e113f990800000000000000
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -354,51 +440,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 811, y: 396}
-  - name: Calque 3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 1600
-      height: 900
-    spriteID: 6f9aed6afac7e80499c6b82cd153645c
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
-  - name: Calque 0
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 912
-      width: 1600
-      height: 900
-    spriteID: 64251c2a1a63b4c41b6ce237164b1cc0
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 912}
+    uvTransform: {x: 1795, y: 3}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -424,35 +466,35 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 2511c7c4cf7ef4b4793ee8b2b59d4ec0
     layerID: 30
-    mosaicPosition: {x: 1734, y: 1138}
+    mosaicPosition: {x: 1797, y: 791}
   - name: Calque 8
     spriteName: Calque 8
     isGroup: 0
     parentIndex: -1
     spriteID: 6f6b75b094dbd234db8fb7f027d6ec43
     layerID: 31
-    mosaicPosition: {x: 1612, y: 1138}
+    mosaicPosition: {x: 1894, y: 765}
   - name: Calque 9
     spriteName: Calque 9
     isGroup: 0
     parentIndex: -1
     spriteID: 1af9ff69de667394c93085e587a35ea4
     layerID: 32
-    mosaicPosition: {x: 1940, y: 421}
+    mosaicPosition: {x: 1894, y: 582}
   - name: Calque 5
     spriteName: Calque 5
     isGroup: 0
     parentIndex: -1
     spriteID: 51e0da9d6f2a0d44d814af352ea8bca5
     layerID: 28
-    mosaicPosition: {x: 1843, y: 421}
+    mosaicPosition: {x: 1797, y: 582}
   - name: Calque 10
     spriteName: Calque 10
     isGroup: 0
     parentIndex: -1
     spriteID: 64116bb59192c8940a724d2c027c05eb
     layerID: 33
-    mosaicPosition: {x: 1843, y: 4}
+    mosaicPosition: {x: 1797, y: 421}
   - name: Calque 11
     spriteName: Calque 11
     isGroup: 0
@@ -466,21 +508,21 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: b9949a9eec8bfb54c8f08b627416f000
     layerID: 35
-    mosaicPosition: {x: 1612, y: 1377}
+    mosaicPosition: {x: 1612, y: 1140}
   - name: Calque 13
     spriteName: Calque 13
     isGroup: 0
     parentIndex: -1
     spriteID: 01cec5ad44a83024ebfb312efe2fbc45
     layerID: 36
-    mosaicPosition: {x: 1612, y: 1281}
+    mosaicPosition: {x: 1612, y: 788}
   - name: Calque 14
     spriteName: Calque 14
     isGroup: 0
     parentIndex: -1
     spriteID: c6902717aece36c44a441b974b3f25e2
     layerID: 37
-    mosaicPosition: {x: 1843, y: 165}
+    mosaicPosition: {x: 1612, y: 4}
   - name: Calque 15
     spriteName: Calque 15
     isGroup: 0
@@ -488,20 +530,13 @@ ScriptedImporter:
     spriteID: 0fb2731991e1e304fa0cef3de4979421
     layerID: 38
     mosaicPosition: {x: 1612, y: 912}
-  - name: Calque 16 copie
-    spriteName: Calque 16 copie
-    isGroup: 0
-    parentIndex: -1
-    spriteID: ea019937c32f6cc48bff7f60fb221f1e
-    layerID: 40
-    mosaicPosition: {x: 1612, y: 4}
   - name: Calque 16
     spriteName: Calque 16
     isGroup: 0
     parentIndex: -1
-    spriteID: dac96d0b7e01bde4f83e02c21db2e3d5
-    layerID: 39
-    mosaicPosition: {x: 1612, y: 421}
+    spriteID: ea019937c32f6cc48bff7f60fb221f1e
+    layerID: 40
+    mosaicPosition: {x: 1797, y: 4}
   - name: Calque 3
     spriteName: Calque 3
     isGroup: 0
