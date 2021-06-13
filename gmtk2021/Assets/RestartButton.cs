@@ -10,4 +10,9 @@ public class RestartButton : MonoBehaviour
     {
         MainManager.Restart();
     }
+
+    public void ClickMenu()
+    {
+        MainManager.MainMenu();
+    }
 }

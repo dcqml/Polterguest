@@ -197,7 +197,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -249,9 +249,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 5
-      minScalar: 5
+      minMaxState: 3
+      scalar: 1
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -366,8 +366,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 0.2
+      scalar: 0.2
+      minScalar: 0.05
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -742,7 +742,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 3
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -5057,10 +5057,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   catchTime: 0.25
   CurrentlyPossessedObject: {fileID: 0}
-  PossessionRadius: 10
+  PossessionRadius: 2.8
   StartObject: {fileID: 0}
   Circle: {fileID: 7164802298888640033}
   Speed: 0.05
+  LevelFinished: 0
 --- !u!1 &8586148773003883621
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class IdlePostTriggerBehaviour : StateMachineBehaviour
     {
         obj = animator.transform.GetComponent<Object>();
         timeLeft = timer;
-        obj.ObjectLight.SetActive(player.CurrentlyPossessedObject == obj);
+        //obj.ObjectLight.SetActive(player.CurrentlyPossessedObject == obj);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

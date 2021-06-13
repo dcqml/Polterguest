@@ -18,7 +18,7 @@ public class PatrollingBehaviour : StateMachineBehaviour
     {
         soundTimeLeft = 0;
         obj = animator.transform.GetComponent<Object>();
-        obj.ObjectLight.SetActive(player.CurrentlyPossessedObject == obj);
+        //obj.ObjectLight.SetActive(player.CurrentlyPossessedObject == obj);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
