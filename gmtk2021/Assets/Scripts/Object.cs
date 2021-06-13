@@ -49,7 +49,8 @@ public class Object : MonoBehaviour
 
     public void Update()
     {
-        bool closeEnough = Vector2.Distance(player.transform.position, transform.position) <= player.PossessionRadius;
+        float dist = Vector2.Distance(player.transform.position, PlayerJointPosition.transform.position);
+        bool closeEnough = dist <= player.PossessionRadius;
         ObjectLight.SetActive(closeEnough && (!Object_Animator.GetBool("isPatrolling") || Object_Animator.GetBool("isIdlePostTrigger"))
             && !Object_Animator.GetBool("isTranslating") && !Object_Animator.GetBool("isFlipping"));
     }
