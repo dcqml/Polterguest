@@ -3088,6 +3088,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deco2 Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7051838405751834839, guid: 78708bbde4ba26c4a894623a9415a151, type: 3}
+      propertyPath: TriggerObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051838405751834839, guid: 78708bbde4ba26c4a894623a9415a151, type: 3}
+      propertyPath: TriggerObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1676988794}
     - target: {fileID: 7051838405751834844, guid: 78708bbde4ba26c4a894623a9415a151, type: 3}
       propertyPath: m_RootOrder
       value: 6
