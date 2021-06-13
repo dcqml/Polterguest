@@ -39,6 +39,12 @@ public class MainManager : MonoBehaviour
         FadeImage.gameObject.SetActive(true);
         StartCoroutine(RestartLevel());
     }
+
+    public void MainMenu()
+    {
+        FadeImage.gameObject.SetActive(true);
+        StartCoroutine(RestartGame());
+    }
     
     // Function to display score popup
     public void DisplayScore()
@@ -61,6 +67,14 @@ public class MainManager : MonoBehaviour
         Transition.SetTrigger("StartFade"); // Activate the transition
         yield return new WaitForSeconds(TransitionTime); // Wait a few time
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Change scene to the next level
+        ClickCount = 0;
+    }
+
+    IEnumerator RestartGame()
+    {
+        Transition.SetTrigger("StartFade"); // Activate the transition
+        yield return new WaitForSeconds(TransitionTime); // Wait a few time
+        SceneManager.LoadScene(0); // Change scene to the next level
         ClickCount = 0;
     }
 }
