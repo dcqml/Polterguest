@@ -8,11 +8,13 @@ public class PatrollingBehaviour : StateMachineBehaviour
     private Object obj;
     private bool toPosA = true;
     private Vector2 patrolPos { get { return toPosA ? obj.PatrolPosA : obj.PatrolPosB; } }
+    private Player player { get { return FindObjectOfType<Player>(); } }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         obj = animator.transform.GetComponent<Object>();
+        obj.ObjectLight.SetActive(player.CurrentlyPossessedObject == obj);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -19,7 +19,6 @@ public class TranslateBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        bool translateY = false;
         //Vector2 target = translateX ? new Vector2(obj.InteractionPosDest.x, animator.transform.position.y) : new Vector2(animator.transform.position.x, obj.InteractionPosDest.y);
         Vector2 target = obj.InteractionPosDest;
         var movement = Vector2.MoveTowards(animator.transform.position, target, TranslateSpeed * Time.deltaTime);

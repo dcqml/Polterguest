@@ -31,6 +31,8 @@ public class Object : MonoBehaviour
     public Object TriggerSource; // Object that triggered the other object
     public bool alreadyTriggered = false;
 
+    public GameObject ObjectLight;
+
     public void Start()
     {
         OriginPos = transform.position;
@@ -41,6 +43,12 @@ public class Object : MonoBehaviour
         if (CanPatrol) Patrol();
     }
 
+    public void Update()
+    {
+        bool closeEnough = Vector2.Distance(player.transform.position, transform.position) <= player.PossessionRadius;
+        ObjectLight.SetActive(closeEnough && (!Object_Animator.GetBool("isPatrolling") || Object_Animator.GetBool("isIdlePostTrigger")));
+    }
+
     // Activation function
     public void Activate()
     {
@@ -48,6 +56,7 @@ public class Object : MonoBehaviour
         {
             if (Reversible || (!Reversible && !ActivatedOnce))
             {
+                Camera.main.GetComponent<RipplePostProcessor>().Ripple(PlayerJointPosition.transform.position);
                 Object_Animator.SetTrigger(InteractionType == InteractionType.Flip ? "flip" : "translate");
                 foreach (var obj in TriggerObjects)
                 {
@@ -71,6 +80,7 @@ public class Object : MonoBehaviour
     public void SetPossess(bool possess)
     {
         Object_Animator.SetBool("isPossessed", possess);
+        if(possess) Camera.main.GetComponent<RipplePostProcessor>().Ripple(PlayerJointPosition.transform.position);
     }
     
     // Patrol function
