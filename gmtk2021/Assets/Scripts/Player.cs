@@ -16,10 +16,14 @@ public class Player : MonoBehaviour
 
     public float Speed;
 
+    private void Awake()
+    {
+        CurrentlyPossessedObject = StartObject.GetComponent<Object>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        CurrentlyPossessedObject = StartObject.GetComponent<Object>();
         CurrentlyPossessedObject.SetPossess(true);
         transform.position = CurrentlyPossessedObject.PlayerJointPosition.transform.position;
     }

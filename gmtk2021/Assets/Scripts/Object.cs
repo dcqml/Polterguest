@@ -33,13 +33,17 @@ public class Object : MonoBehaviour
 
     public GameObject ObjectLight;
 
-    public void Start()
+    public void Awake()
     {
         OriginPos = transform.position;
         Object_Animator = GetComponent<Animator>();
         InteractionPosDest = InteractionPosDestObj.transform.position;
         PatrolPosA = PatrolPosAObj.transform.position;
         PatrolPosB = PatrolPosBObj.transform.position;
+    }
+
+    public void Start()
+    {
         if (CanPatrol) Patrol();
     }
 
