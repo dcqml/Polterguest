@@ -4,7 +4,7 @@ using UnityEngine;
 public class Object : MonoBehaviour
 {
     // Initialization
-    
+    private AudioManager audioManager { get { return FindObjectOfType<AudioManager>(); } }
     public bool IsEndObject = false;
     public bool IsPossessed { get { return Object_Animator.GetBool("isPossessed"); } }
 
@@ -95,8 +95,10 @@ public class Object : MonoBehaviour
         if (possess)
         {
             Camera.main.GetComponent<RipplePostProcessor>().Ripple(PlayerJointPosition.transform.position);
+            audioManager.PlaySound(audioManager.Possess);
             if(IsEndObject)
             {
+                audioManager.PlaySound(audioManager.EndOfLevel);
                 FindObjectOfType<MainManager>().DisplayScore();
             }
         }

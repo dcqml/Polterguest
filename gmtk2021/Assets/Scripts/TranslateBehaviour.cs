@@ -6,12 +6,16 @@ public class TranslateBehaviour : StateMachineBehaviour
 {
     private Object obj;
     private Animation anim;
+    private float soundTimeLeft;
+
+    private AudioManager audioManager { get { return FindObjectOfType<AudioManager>(); } }
 
     public float TranslateSpeed;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        soundTimeLeft = 0;
         obj = animator.GetComponent<Object>();
         anim = animator.GetComponent<Animation>();
     }
@@ -19,6 +23,15 @@ public class TranslateBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (soundTimeLeft <= 0)
+        {
+            soundTimeLeft = audioManager.Translate.length;
+            audioManager.PlaySound(audioManager.Translate);
+        }
+        else
+        {
+            soundTimeLeft -= Time.deltaTime;
+        }
         //Vector2 target = translateX ? new Vector2(obj.InteractionPosDest.x, animator.transform.position.y) : new Vector2(animator.transform.position.x, obj.InteractionPosDest.y);
         Vector2 target = obj.InteractionPosDest;
         float dist = Vector2.Distance(new Vector2(animator.transform.position.x, animator.transform.position.y), target);

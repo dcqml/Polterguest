@@ -8,12 +8,15 @@ public class FlipBehaviour : StateMachineBehaviour
 
     private bool flipped = false;
 
+    private AudioManager audioManager { get { return FindObjectOfType<AudioManager>(); } }
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         obj = animator.GetComponent<Object>();
         flipped = !flipped;
         animator.SetBool("isFlipping", true);
+        audioManager.PlaySound(audioManager.Flip);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

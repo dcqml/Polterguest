@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
 
     public bool LevelFinished = false;
 
+    private AudioManager audioManager { get { return FindObjectOfType<AudioManager>(); } }
+
     private void Awake()
     {
         CurrentlyPossessedObject = StartObject.GetComponent<Object>();
@@ -28,11 +30,23 @@ public class Player : MonoBehaviour
     {
         CurrentlyPossessedObject.SetPossess(true);
         transform.position = CurrentlyPossessedObject.PlayerJointPosition.transform.position;
+        soundTimeLeft = 0;
     }
 
+
+    private float soundTimeLeft;
     void Update()
     {
-        if(!LevelFinished)
+        if (soundTimeLeft <= 0)
+        {
+            soundTimeLeft = audioManager.LevelMusic.length;
+            audioManager.PlaySound(audioManager.LevelMusic, 0.5f);
+        }
+        else
+        {
+            soundTimeLeft -= Time.deltaTime;
+        }
+        if (!LevelFinished)
         {
             if (Vector2.Distance(transform.position, CurrentlyPossessedObject.PlayerJointPosition.transform.position) > 0.1f)
             {
