@@ -8,7 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: 82f2e0cee1ac9494fbf7847971cbfc3b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/IntroLevel.unity
+    guid: 4055474b07db2bd47bf125b9c1a5d3b5
+  - enabled: 1
+    path: Assets/Scenes/Chia01.unity
+    guid: 274903ee941225d4893030d3b06ab0bb
+  - enabled: 1
+    path: Assets/Scenes/Chia02.unity
+    guid: 157b349089d24294f90c2d9b40d72aec
+  - enabled: 1
+    path: Assets/Scenes/Chia03.unity
+    guid: 9925a5252050cd744a4af9e598f1b85f
   m_configObjects: {}
