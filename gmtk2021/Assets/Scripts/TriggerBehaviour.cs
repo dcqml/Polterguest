@@ -6,10 +6,14 @@ public class TriggerBehaviour : StateMachineBehaviour
 {
     private Object obj;
     public float speed;
+
+    private AudioManager audioManager { get { return FindObjectOfType<AudioManager>(); } }
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         obj = animator.transform.GetComponent<Object>();
+        audioManager.PlaySound(audioManager.Trigger);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

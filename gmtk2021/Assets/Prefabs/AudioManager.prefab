@@ -50,8 +50,9 @@ MonoBehaviour:
   Button: {fileID: 8300000, guid: b01c5d706c4030048a0229fe5bb937ab, type: 3}
   Possess: {fileID: 8300000, guid: 20ba2ae99d36d024896e6ff09a76377e, type: 3}
   Translate: {fileID: 8300000, guid: 0d6c7b26cdc3a9d4289bfc77e5d5d46f, type: 3}
-  Trigger: {fileID: 0}
+  Trigger: {fileID: 8300000, guid: 28eda87be7b8f0f4fa76a5e612fb4362, type: 3}
   LevelMusic: {fileID: 8300000, guid: 43045418bad816f4b9c7d6133eba72da, type: 3}
+  LevelMusic2: {fileID: 8300000, guid: e6996d49eaccde9408b6625428083bc1, type: 3}
   AudioSource: {fileID: 1568037834038633842, guid: 3ba8345ac0bcff240b76623822b9c36f, type: 3}
 --- !u!82 &4300030584911447618
 AudioSource:

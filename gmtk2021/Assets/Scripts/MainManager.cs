@@ -7,7 +7,7 @@ public class MainManager : MonoBehaviour
     // Variables
     public Animator Transition;
     private float TransitionTime = 0.66f;
-    private int ClickCount = 0;
+    public int ClickCount = 0;
     public GameObject ScoreWindows;
 
     public UnityEngine.UI.Image FadeImage;
@@ -20,10 +20,6 @@ public class MainManager : MonoBehaviour
         {
             FadeImage.gameObject.SetActive(false);
             fadeDisabled = true;
-        }
-        if (Input.GetButtonDown("Fire1"))
-        {
-            ClickCount++;
         }
     }
 

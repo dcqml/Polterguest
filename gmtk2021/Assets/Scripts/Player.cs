@@ -147,6 +147,7 @@ public class Player : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<MainManager>().ClickCount = FindObjectOfType<MainManager>().ClickCount + 1;
                 CurrentlyPossessedObject.SetPossess(false);
                 print($"possession de {obj.name}");
                 CurrentlyPossessedObject = obj;
@@ -157,6 +158,7 @@ public class Player : MonoBehaviour
         {
             if(obj.GetComponent<Animator>().GetBool("isIdlePostTrigger"))
             {
+                FindObjectOfType<MainManager>().ClickCount = FindObjectOfType<MainManager>().ClickCount + 1;
                 CurrentlyPossessedObject.SetPossess(false);
                 print($"possession du patrouilleur {obj.name}");
                 CurrentlyPossessedObject = obj;
