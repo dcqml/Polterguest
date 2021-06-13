@@ -41,8 +41,9 @@ public class Player : MonoBehaviour
             else
             {
                 transform.position = CurrentlyPossessedObject.PlayerJointPosition.transform.position;
+                Circle.transform.localScale = new Vector3(PossessionRadius, PossessionRadius, 1);
             }
-            Circle.transform.localScale = new Vector3(PossessionRadius, PossessionRadius, 1);
+            
 
             if (Input.GetButtonDown("Fire1"))
             {
@@ -65,7 +66,7 @@ public class Player : MonoBehaviour
                             if (obj != null)
                             {
                                 dist = Vector2.Distance(mousePos, obj.PlayerJointPosition.transform.position);
-                                if (dist < distMin)
+                                if (dist < distMin && obj.ObjectLight.activeSelf)
                                 {
                                     distMin = dist;
                                     objMin = obj;

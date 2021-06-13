@@ -21,8 +21,17 @@ public class TranslateBehaviour : StateMachineBehaviour
     {
         //Vector2 target = translateX ? new Vector2(obj.InteractionPosDest.x, animator.transform.position.y) : new Vector2(animator.transform.position.x, obj.InteractionPosDest.y);
         Vector2 target = obj.InteractionPosDest;
-        var movement = Vector2.MoveTowards(animator.transform.position, target, TranslateSpeed * Time.deltaTime);
-        animator.transform.position = movement;
+        float dist = Vector2.Distance(new Vector2(animator.transform.position.x, animator.transform.position.y), target);
+        if(dist > 0.1f)
+        {
+            var movement = Vector2.MoveTowards(animator.transform.position, target, TranslateSpeed * Time.deltaTime);
+            animator.transform.position = movement;
+        }
+        else
+        {
+            animator.transform.position = target;
+            animator.SetBool("isTranslating", false);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -23,7 +23,7 @@ public class PatrollingBehaviour : StateMachineBehaviour
         var patrolPos = toPosA ? obj.PatrolPosA : obj.PatrolPosB;
         bool leftDir = animator.transform.position.x - patrolPos.x > 0;
         obj.transform.rotation = Quaternion.Euler(obj.transform.rotation.x, leftDir ? 180 : 0, 0);
-        if (Vector2.Distance(animator.transform.position, patrolPos) > 0.2f)
+        if (Vector2.Distance(animator.transform.position, patrolPos) > 0.1f)
         {
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, patrolPos, speed * Time.deltaTime);
         }

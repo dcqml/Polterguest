@@ -13,6 +13,7 @@ public class FlipBehaviour : StateMachineBehaviour
     {
         obj = animator.GetComponent<Object>();
         flipped = !flipped;
+        animator.SetBool("isFlipping", true);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -20,5 +21,6 @@ public class FlipBehaviour : StateMachineBehaviour
     {
         //obj.AnimObject.GetComponent<SpriteRenderer>().flipX = flipped;
         obj.transform.rotation = Quaternion.Euler(obj.transform.rotation.x, flipped ? 180 : 0, 0);
+        animator.SetBool("isFlipping", false);
     }
 }

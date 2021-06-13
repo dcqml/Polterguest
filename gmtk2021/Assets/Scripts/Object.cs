@@ -50,7 +50,8 @@ public class Object : MonoBehaviour
     public void Update()
     {
         bool closeEnough = Vector2.Distance(player.transform.position, transform.position) <= player.PossessionRadius;
-        ObjectLight.SetActive(closeEnough && (!Object_Animator.GetBool("isPatrolling") || Object_Animator.GetBool("isIdlePostTrigger")));
+        ObjectLight.SetActive(closeEnough && (!Object_Animator.GetBool("isPatrolling") || Object_Animator.GetBool("isIdlePostTrigger"))
+            && !Object_Animator.GetBool("isTranslating") && !Object_Animator.GetBool("isFlipping"));
     }
 
     // Activation function
@@ -61,7 +62,14 @@ public class Object : MonoBehaviour
             if (Reversible || (!Reversible && !ActivatedOnce))
             {
                 Camera.main.GetComponent<RipplePostProcessor>().Ripple(PlayerJointPosition.transform.position);
-                Object_Animator.SetTrigger(InteractionType == InteractionType.Flip ? "flip" : "translate");
+                if(InteractionType == InteractionType.Flip)
+                {
+                    Object_Animator.SetTrigger("flip");
+                }
+                else
+                {
+                    Object_Animator.SetBool("isTranslating", true);
+                }
                 foreach (var obj in TriggerObjects)
                 {
                     var objComp = obj.GetComponent<Object>();
