@@ -335,8 +335,8 @@ ScriptedImporter:
     uvTransform: {x: 811, y: -21}
   - name: Calque 16
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 1, y: 0.5}
+    alignment: 5
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2

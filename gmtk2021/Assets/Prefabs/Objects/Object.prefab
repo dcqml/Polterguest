@@ -98,7 +98,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &2697284944468589402
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +288,8 @@ MonoBehaviour:
   PatrolPosA: {x: 0, y: 0}
   PatrolPosB: {x: 0, y: 0}
   TriggerObjects: []
+  TriggerSource: {fileID: 0}
+  alreadyTriggered: 0
 --- !u!1 &7545736449052613941
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,7 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5966822610909163758, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
       propertyPath: m_Name
-      value: Lampe
+      value: Lampe Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328995571031144592, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.775
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328995571031144592, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.599
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1962b981172449a49a136d8a5aa408df, type: 3}
