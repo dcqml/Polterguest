@@ -52,6 +52,7 @@ MonoBehaviour:
   Translate: {fileID: 8300000, guid: 0d6c7b26cdc3a9d4289bfc77e5d5d46f, type: 3}
   Trigger: {fileID: 0}
   LevelMusic: {fileID: 8300000, guid: 43045418bad816f4b9c7d6133eba72da, type: 3}
+  AudioSource: {fileID: 1568037834038633842, guid: 3ba8345ac0bcff240b76623822b9c36f, type: 3}
 --- !u!82 &4300030584911447618
 AudioSource:
   m_ObjectHideFlags: 0
